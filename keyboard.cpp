@@ -21,7 +21,7 @@
 * Date        Author        Ref    Revision (Date in YYYYMMDD format)
 * 20200203    MatTerra        1    Initial Version
 * 20200204    MatTerra        2    Added layout properties to expand
-*
+* 20200204    Victor-Matheus  3    Implementação dos botões e conexão dos sinais
 **********************************************************************
 */
 
@@ -32,71 +32,200 @@ Keyboard::Keyboard():Gtk::Grid(){
   set_valign(Gtk::ALIGN_FILL);
   set_row_spacing(10);
   set_column_spacing(10);
+  this.createButtons();
+  this.buildLayout();
+  this.connectSignals();
+}
 
-  KeyboardButton* qButton = new KeyboardButton("q");
-  attach(*qButton,0,0);
+void KeyboardButton::connectSignals(){
   qButton->signal_keypress().connect(sigc::mem_fun(this,
-                &Keyboard::onKeyPress) );
-  KeyboardButton* wButton = new KeyboardButton("w");
-  attach(*wButton,1,0);
+                &Keyboard::onKeyPress) );  
   wButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
+  eButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  rButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  tButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  yButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  uButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  iButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  oButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  pButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );                                                                                                  
+  acuteButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  aButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  sButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  dButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );   
+  fButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  gButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  hButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  jButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );   
+  kButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  lButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  ccdiuButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );   
+  graveButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );    
+  zButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );  
+  xButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );    
+  cButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );   
+  vButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );  
+  bButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  nButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  mButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  spaceButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+}
+
+void KeyboardButton::createButtons(){
+  KeyboardButton* qButton = new KeyboardButton("q");
+
+  KeyboardButton* wButton = new KeyboardButton("w");
+  
   KeyboardButton* eButton = new KeyboardButton("e");
-  attach(*eButton,2,0);
+  
   KeyboardButton* rButton = new KeyboardButton("r");
-  attach(*rButton,3,0);
+ 
   KeyboardButton* tButton = new KeyboardButton("t");
-  attach(*tButton,4,0);
+ 
   KeyboardButton* yButton = new KeyboardButton("y");
-  attach(*yButton,5,0);
+ 
   KeyboardButton* uButton = new KeyboardButton("u");
-  attach(*uButton,6,0);
+  
   KeyboardButton* iButton = new KeyboardButton("i");
-  attach(*iButton,7,0);
+  
   KeyboardButton* oButton = new KeyboardButton("o");
-  attach(*oButton,8,0);
+  
   KeyboardButton* pButton = new KeyboardButton("p");
-  attach(*pButton,9,0);
+ 
   KeyboardButton* acuteButton = new KeyboardButton("´");
-  attach(*acuteButton,10,0);
+ 
   KeyboardButton* aButton = new KeyboardButton("a");
-  attach(*aButton,0,1);
+  
   KeyboardButton* sButton = new KeyboardButton("s");
-  attach(*sButton,1,1);
+  
   KeyboardButton* dButton = new KeyboardButton("d");
-  attach(*dButton,2,1);
+  
   KeyboardButton* fButton = new KeyboardButton("f");
-  attach(*fButton,3,1);
+  
   KeyboardButton* gButton = new KeyboardButton("g");
-  attach(*gButton,4,1);
+  
   KeyboardButton* hButton = new KeyboardButton("h");
-  attach(*hButton,5,1);
+  
   KeyboardButton* jButton = new KeyboardButton("j");
-  attach(*jButton,6,1);
+  
   KeyboardButton* kButton = new KeyboardButton("k");
-  attach(*kButton,7,1);
+  
   KeyboardButton* lButton = new KeyboardButton("l");
-  attach(*lButton,8,1);
-  KeyboardButton* cCedilButton = new KeyboardButton("ç");
-  attach(*cCedilButton,9,1);
+  
+  KeyboardButton* ccdiuButton = new KeyboardButton("ç");
+ 
   KeyboardButton* graveButton = new KeyboardButton("^");
-  attach(*graveButton,10,1);
-  KeyboardButton* zbutton = new KeyboardButton("z");
-  attach(*zbutton,2,2);
+  
+  KeyboardButton* zButton = new KeyboardButton("z");
+  
   KeyboardButton* xButton = new KeyboardButton("x");
-  attach(*xButton,3,2);
+  
   KeyboardButton* cButton = new KeyboardButton("c");
-  attach(*cButton,4,2);
+  
   KeyboardButton* vButton = new KeyboardButton("v");
-  attach(*vButton,5,2);
+  
   KeyboardButton* bButton = new KeyboardButton("b");
-  attach(*bButton,6,2);
+  
   KeyboardButton* nButton = new KeyboardButton("n");
-  attach(*nButton,7,2);
+ 
   KeyboardButton* mButton = new KeyboardButton("m");
+  
+  KeyboardButton* spaceButton = new KeyboardButton(" ");
+}
+
+void KeyboardButton::buildLayout(){
+  attach(*qButton,0,0);
+
+  attach(*wButton,1,0);
+
+  attach(*eButton,2,0);
+
+  attach(*rButton,3,0);
+
+  attach(*tButton,4,0);
+ 
+  attach(*yButton,5,0);
+  
+  attach(*uButton,6,0);
+ 
+  attach(*iButton,7,0);
+  
+  attach(*oButton,8,0);
+  
+  attach(*pButton,9,0);
+ 
+  attach(*acuteButton,10,0);
+  
+  attach(*aButton,0,1);
+ 
+  attach(*sButton,1,1);
+  
+  attach(*dButton,2,1);
+ 
+  attach(*fButton,3,1);
+  
+  attach(*gButton,4,1);
+  
+  attach(*hButton,5,1);
+ 
+  attach(*jButton,6,1);
+  
+  attach(*kButton,7,1);
+ 
+  attach(*lButton,8,1);
+  
+  attach(*ccdiuButton,9,1);
+ 
+  attach(*graveButton,10,1);
+ 
+  attach(*zButton,2,2);
+  
+  attach(*xButton,3,2);
+  
+  attach(*cButton,4,2);
+  
+  attach(*vButton,5,2);
+  
+  attach(*bButton,6,2);
+  
+  attach(*nButton,7,2);
+  
   attach(*mButton,8,2);
+  
+  attach(*spaceButton,2,3,7);
+  
   show_all();
 }
+
 
 void Keyboard::onKeyPress(Glib::ustring letter){
   std::cout << letter.raw() << std::endl;

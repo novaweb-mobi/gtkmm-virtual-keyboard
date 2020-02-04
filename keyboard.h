@@ -9,7 +9,7 @@
 *
 * Description       : Header do teclado virtual com layout QWERTY brasileiro para aplicações em C++ utilizando GTK-- e sigc++
 *
-* Author            : MatTerra
+* Author            : MatTerra, Victor-Matheus
 *
 * Date created      : 20200203
 *
@@ -18,8 +18,9 @@
 *
 * Revision History  :
 *
-* Date        Author      Ref    Revision (Date in YYYYMMDD format)
-* 20200203    MatTerra      1    Initial Version
+* Date        Author          Ref    Revision (Date in YYYYMMDD format)
+* 20200203    MatTerra        1      Initial Version
+* 20200204    Victor-Matheus  2      Implementação do teclado e documentação
 *
 **********************************************************************
 */
@@ -50,6 +51,23 @@ public:
   type_signal_input signal_input();
 protected:
   type_signal_input m_signal_input; //!< Variável de instância do objeto do sinal que é emitido.
+
+private:
+  /**
+   * @brief buildLayout Adiciona os botões a grid de acordo com o padrão de teclado brasileiro QWERTY.
+   */
+  void buildLayout();
+
+  /**
+   * @brief connectSignals Conecta os sinais de cliques dos botões ao processador do teclado.
+   */
+  void connectSignals();
+
+  /**
+   * @brief createButtons Cria as instâncias dos botões para o teclado.
+   */
+
+  void createButtons();
 };
 
 #endif // KEYBOARD_H
