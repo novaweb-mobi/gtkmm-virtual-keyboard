@@ -31,12 +31,24 @@
 
 class KeyboardButton : public Gtk::Button{
 public:
-  KeyboardButton(const char*);
+  KeyboardButton(const char*); /** Construtor Padrão */
   //signal accessor:
+  /**
+   * @brief type_signal_keypress Tipo de sinal emitido pela tecla.
+   */
   typedef sigc::signal<void, Glib::ustring> type_signal_keypress;
+
+  /**
+   * @brief signal_keypress Sinal de pressionado que é emitido pelo botão.
+   * @return m_signal_keypress O conteúdo do botão
+   */
   type_signal_keypress signal_keypress();
 protected:
-  type_signal_keypress m_signal_keypress;
+  type_signal_keypress m_signal_keypress; //!< Variável de instância do objeto do sinal que é emitido.
+
+  /**
+   * @brief on_clicked Slot herdado do botão para tratar cliques e emitir o sinal tratado
+   */
   virtual void on_clicked();
 };
 

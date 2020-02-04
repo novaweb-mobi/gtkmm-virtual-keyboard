@@ -30,7 +30,12 @@
 class KeyboardEntry : public Gtk::Entry
 {
 public:
-  KeyboardEntry();
+  KeyboardEntry(); /** Construtor Padrão */
+
+  /**
+   * @brief append_text Adiciona o texto recebido ao final do texto atual do KeyboardEntry
+   * @param text Texto a ser adicionado
+   */
   void append_text(Glib::ustring);
 };
 

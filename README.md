@@ -5,7 +5,7 @@ This project is a virtual application keyboard developed in c++ using gtkmm and 
 
 ## First Steps
 
-We use CMake to compile and build the keyboard. It was developed as a Gtk::Grid that can be added to other containers as Windows and Boxes. It emits a signal_input() with a char argument whenever a key is pressed.
+We use CMake to compile and build the keyboard. It was developed as a Gtk::Grid that can be added to other containers as Windows and Boxes. It emits a signal_input() with a Glib::ustring argument whenever a key is pressed.
 
 ### Prerequisites
 
@@ -43,7 +43,7 @@ To use the keyboard with your application you need to use sigc++ and create a sl
 Keyboard* keyboard =  new Keyboard();
 ```
 
-You can then add it to a window or container. Below you can see how to connect a callback function to the signal_input. The callback must be a void function that takes a const char* as an argument and entry is not a pointer.
+You can then add it to a window or container. Below you can see how to connect a callback function to the signal_input. The callback must be a void function that takes a const Glib::ustring* as an argument and entry is not a pointer.
 
 ```
 keyboard->signal_input().connect(sigc::mem_fun(receiver_object, &receiver_object::callback_function));
