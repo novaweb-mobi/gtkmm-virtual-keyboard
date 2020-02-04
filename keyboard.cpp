@@ -13,13 +13,14 @@
 *
 * Date created      : 20200203
 *
+* Copyright         : Novaweb - 2020
 *
 *
 * Revision History  :
 *
 * Date        Author        Ref    Revision (Date in YYYYMMDD format)
 * 20200203    MatTerra        1    Initial Version
-* 20200204    Victor-Matheus  2    General Implementation of layout and signals
+* 20200204    MatTerra        2    Added layout properties to expand
 *
 **********************************************************************
 */
