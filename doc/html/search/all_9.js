@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['type_5fsignal_5finput_23',['type_signal_input',['../class_keyboard.html#a5c81e7f346f4840d7cf6ffd357546a69',1,'Keyboard']]],
-  ['type_5fsignal_5fkeypress_24',['type_signal_keypress',['../class_keyboard_button.html#a964db201117b8f7a7a4307331b199c56',1,'KeyboardButton']]]
+  ['jbutton_20',['jButton',['../class_keyboard.html#a8d0c183eea1e216ba9657c6043eeee7d',1,'Keyboard']]]
 ];

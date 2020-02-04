@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Gtkmm Virtual Keyboard
-   &#160;<span id="projectnumber">0.1.0-alpha</span>
+   &#160;<span id="projectnumber">1.0.0-alpha</span>
    </div>
    <div id="projectbrief">This project is a virtual application keyboard developed in c++ using gtkmm and sigc++. You will need to have sigc++ to connect a slot to the input signal emitted by the keyboard. It is not meant to work as a virtual keyboard for other processes but rather a component in a gtkmm or c++ application.</div>
   </td>
@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('class_keyboard.html',''); initResizabl
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_keyboard-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Keyboard Class Reference</div>  </div>
@@ -117,12 +118,84 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf8b48ece4c30481acb7873eb219364e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard.html#a5c81e7f346f4840d7cf6ffd357546a69">type_signal_input</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#adf8b48ece4c30481acb7873eb219364e">signal_input</a> ()</td></tr>
 <tr class="memdesc:adf8b48ece4c30481acb7873eb219364e"><td class="mdescLeft">&#160;</td><td class="mdescRight">signal_input Sinal do input que é emitido pelo teclado.  <a href="class_keyboard.html#adf8b48ece4c30481acb7873eb219364e">More...</a><br /></td></tr>
 <tr class="separator:adf8b48ece4c30481acb7873eb219364e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b79ec0f705069b515fdcad489d5a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a98b79ec0f705069b515fdcad489d5a35">buildLayout</a> ()</td></tr>
+<tr class="memdesc:a98b79ec0f705069b515fdcad489d5a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">buildLayout Adiciona os botões a grid de acordo com o padrão de teclado brasileiro QWERTY.  <a href="class_keyboard.html#a98b79ec0f705069b515fdcad489d5a35">More...</a><br /></td></tr>
+<tr class="separator:a98b79ec0f705069b515fdcad489d5a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0327b7f5d61920e6ca37ac02ea07a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#ada0327b7f5d61920e6ca37ac02ea07a5">connectSignals</a> ()</td></tr>
+<tr class="memdesc:ada0327b7f5d61920e6ca37ac02ea07a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">connectSignals Conecta os sinais de cliques dos botões ao processador do teclado.  <a href="class_keyboard.html#ada0327b7f5d61920e6ca37ac02ea07a5">More...</a><br /></td></tr>
+<tr class="separator:ada0327b7f5d61920e6ca37ac02ea07a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb27be3e6dee4ecf69c8b82d6e063f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#aebb27be3e6dee4ecf69c8b82d6e063f4">createButtons</a> ()</td></tr>
+<tr class="memdesc:aebb27be3e6dee4ecf69c8b82d6e063f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">createButtons Cria as instâncias dos botões para o teclado.  <a href="class_keyboard.html#aebb27be3e6dee4ecf69c8b82d6e063f4">More...</a><br /></td></tr>
+<tr class="separator:aebb27be3e6dee4ecf69c8b82d6e063f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a97266c098ff0e2515bd1ec5af6230f26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard.html#a5c81e7f346f4840d7cf6ffd357546a69">type_signal_input</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a97266c098ff0e2515bd1ec5af6230f26">m_signal_input</a></td></tr>
 <tr class="memdesc:a97266c098ff0e2515bd1ec5af6230f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variável de instância do objeto do sinal que é emitido.  <a href="class_keyboard.html#a97266c098ff0e2515bd1ec5af6230f26">More...</a><br /></td></tr>
 <tr class="separator:a97266c098ff0e2515bd1ec5af6230f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a985d6cd7b116536adf0a4f6ae62b38e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a985d6cd7b116536adf0a4f6ae62b38e2">qButton</a></td></tr>
+<tr class="separator:a985d6cd7b116536adf0a4f6ae62b38e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11db0a6654039af97743397cc3b84c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#ab11db0a6654039af97743397cc3b84c0">wButton</a></td></tr>
+<tr class="separator:ab11db0a6654039af97743397cc3b84c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e749ee746b356ed79591769eb7b5f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#ad1e749ee746b356ed79591769eb7b5f6">eButton</a></td></tr>
+<tr class="separator:ad1e749ee746b356ed79591769eb7b5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5ab0e55597e8ff1ef18de137b662b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a8c5ab0e55597e8ff1ef18de137b662b7">rButton</a></td></tr>
+<tr class="separator:a8c5ab0e55597e8ff1ef18de137b662b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15700678a2e868057d2e9545b280362"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#ae15700678a2e868057d2e9545b280362">tButton</a></td></tr>
+<tr class="separator:ae15700678a2e868057d2e9545b280362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62ab8773a4065e87bbd0a316948b62b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#aa62ab8773a4065e87bbd0a316948b62b">yButton</a></td></tr>
+<tr class="separator:aa62ab8773a4065e87bbd0a316948b62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a373169c007ecfd1e32098f38b0e0f354"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a373169c007ecfd1e32098f38b0e0f354">uButton</a></td></tr>
+<tr class="separator:a373169c007ecfd1e32098f38b0e0f354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b7cae30d536caa8b6aa688a65f31ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a28b7cae30d536caa8b6aa688a65f31ad">iButton</a></td></tr>
+<tr class="separator:a28b7cae30d536caa8b6aa688a65f31ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad73c61660b2af4088816721837325817"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#ad73c61660b2af4088816721837325817">oButton</a></td></tr>
+<tr class="separator:ad73c61660b2af4088816721837325817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c486b433d3d34ffc87da81c8bea957"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a67c486b433d3d34ffc87da81c8bea957">pButton</a></td></tr>
+<tr class="separator:a67c486b433d3d34ffc87da81c8bea957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3ac22158edb9732e51f964ab59cfe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#aed3ac22158edb9732e51f964ab59cfe9">acuteButton</a></td></tr>
+<tr class="separator:aed3ac22158edb9732e51f964ab59cfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f1aad618669296a5c7c90b1e573794"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a15f1aad618669296a5c7c90b1e573794">aButton</a></td></tr>
+<tr class="separator:a15f1aad618669296a5c7c90b1e573794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af066ba831bc83bc77dbefc7d685eb780"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#af066ba831bc83bc77dbefc7d685eb780">sButton</a></td></tr>
+<tr class="separator:af066ba831bc83bc77dbefc7d685eb780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2c3a5a6d2d7f0f6de49634974881f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a1e2c3a5a6d2d7f0f6de49634974881f7">dButton</a></td></tr>
+<tr class="separator:a1e2c3a5a6d2d7f0f6de49634974881f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f556fa53f91f1e979d5cf98915ad9d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a2f556fa53f91f1e979d5cf98915ad9d7">fButton</a></td></tr>
+<tr class="separator:a2f556fa53f91f1e979d5cf98915ad9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814e5cf15be05d7b67ce5a7adbdd5622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a814e5cf15be05d7b67ce5a7adbdd5622">gButton</a></td></tr>
+<tr class="separator:a814e5cf15be05d7b67ce5a7adbdd5622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb372a431dcbda5b0c35c380ef4fc0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#acfb372a431dcbda5b0c35c380ef4fc0d">hButton</a></td></tr>
+<tr class="separator:acfb372a431dcbda5b0c35c380ef4fc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0c183eea1e216ba9657c6043eeee7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a8d0c183eea1e216ba9657c6043eeee7d">jButton</a></td></tr>
+<tr class="separator:a8d0c183eea1e216ba9657c6043eeee7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f2d020a8b64cd70ab067ee244c33fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#ad1f2d020a8b64cd70ab067ee244c33fa">kButton</a></td></tr>
+<tr class="separator:ad1f2d020a8b64cd70ab067ee244c33fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a173a108cad8c0b55224483feec5f4822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a173a108cad8c0b55224483feec5f4822">lButton</a></td></tr>
+<tr class="separator:a173a108cad8c0b55224483feec5f4822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7a7b8b316f8a547fc6371cb1fea8e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#aee7a7b8b316f8a547fc6371cb1fea8e2">ccdiuButton</a></td></tr>
+<tr class="separator:aee7a7b8b316f8a547fc6371cb1fea8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bb24490b64ddae10f110baf0f9ae4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#ab3bb24490b64ddae10f110baf0f9ae4e">graveButton</a></td></tr>
+<tr class="separator:ab3bb24490b64ddae10f110baf0f9ae4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046ec584ce27677e52cb1c2fce518570"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a046ec584ce27677e52cb1c2fce518570">zButton</a></td></tr>
+<tr class="separator:a046ec584ce27677e52cb1c2fce518570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b2650bbc2f9429b5ca9addbd1b8a58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a44b2650bbc2f9429b5ca9addbd1b8a58">xButton</a></td></tr>
+<tr class="separator:a44b2650bbc2f9429b5ca9addbd1b8a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a75d6a67740e06259d89cea6096ea3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a4a75d6a67740e06259d89cea6096ea3f">cButton</a></td></tr>
+<tr class="separator:a4a75d6a67740e06259d89cea6096ea3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113c63a1f2f7c418cc9b77f8c4a5d898"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a113c63a1f2f7c418cc9b77f8c4a5d898">vButton</a></td></tr>
+<tr class="separator:a113c63a1f2f7c418cc9b77f8c4a5d898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c972e8bc6443b272ff12e0b8966153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a22c972e8bc6443b272ff12e0b8966153">bButton</a></td></tr>
+<tr class="separator:a22c972e8bc6443b272ff12e0b8966153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbabf210f4cd82209a2204d8dac8afd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a9bbabf210f4cd82209a2204d8dac8afd">nButton</a></td></tr>
+<tr class="separator:a9bbabf210f4cd82209a2204d8dac8afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f29eae249111de51512ef993df73e0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a8f29eae249111de51512ef993df73e0b">mButton</a></td></tr>
+<tr class="separator:a8f29eae249111de51512ef993df73e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ca6b8ad026137cc7300a2d3b9d3f4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_keyboard_button.html">KeyboardButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard.html#a64ca6b8ad026137cc7300a2d3b9d3f4d">spaceButton</a></td></tr>
+<tr class="separator:a64ca6b8ad026137cc7300a2d3b9d3f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5c81e7f346f4840d7cf6ffd357546a69"></a>
@@ -161,6 +234,63 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a98b79ec0f705069b515fdcad489d5a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b79ec0f705069b515fdcad489d5a35">&#9670;&nbsp;</a></span>buildLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Keyboard::buildLayout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>buildLayout Adiciona os botões a grid de acordo com o padrão de teclado brasileiro QWERTY. </p>
+
+</div>
+</div>
+<a id="ada0327b7f5d61920e6ca37ac02ea07a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada0327b7f5d61920e6ca37ac02ea07a5">&#9670;&nbsp;</a></span>connectSignals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Keyboard::connectSignals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>connectSignals Conecta os sinais de cliques dos botões ao processador do teclado. </p>
+
+</div>
+</div>
+<a id="aebb27be3e6dee4ecf69c8b82d6e063f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb27be3e6dee4ecf69c8b82d6e063f4">&#9670;&nbsp;</a></span>createButtons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Keyboard::createButtons </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>createButtons Cria as instâncias dos botões para o teclado. </p>
+
+</div>
+</div>
 <a id="a8ee8917f48c73b700f133a5cc244e15e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ee8917f48c73b700f133a5cc244e15e">&#9670;&nbsp;</a></span>onKeyPress()</h2>
 
@@ -202,6 +332,336 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a15f1aad618669296a5c7c90b1e573794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f1aad618669296a5c7c90b1e573794">&#9670;&nbsp;</a></span>aButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::aButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed3ac22158edb9732e51f964ab59cfe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3ac22158edb9732e51f964ab59cfe9">&#9670;&nbsp;</a></span>acuteButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::acuteButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22c972e8bc6443b272ff12e0b8966153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c972e8bc6443b272ff12e0b8966153">&#9670;&nbsp;</a></span>bButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::bButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a75d6a67740e06259d89cea6096ea3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a75d6a67740e06259d89cea6096ea3f">&#9670;&nbsp;</a></span>cButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::cButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee7a7b8b316f8a547fc6371cb1fea8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7a7b8b316f8a547fc6371cb1fea8e2">&#9670;&nbsp;</a></span>ccdiuButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::ccdiuButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e2c3a5a6d2d7f0f6de49634974881f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2c3a5a6d2d7f0f6de49634974881f7">&#9670;&nbsp;</a></span>dButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::dButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1e749ee746b356ed79591769eb7b5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e749ee746b356ed79591769eb7b5f6">&#9670;&nbsp;</a></span>eButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::eButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f556fa53f91f1e979d5cf98915ad9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f556fa53f91f1e979d5cf98915ad9d7">&#9670;&nbsp;</a></span>fButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::fButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a814e5cf15be05d7b67ce5a7adbdd5622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814e5cf15be05d7b67ce5a7adbdd5622">&#9670;&nbsp;</a></span>gButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::gButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3bb24490b64ddae10f110baf0f9ae4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bb24490b64ddae10f110baf0f9ae4e">&#9670;&nbsp;</a></span>graveButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::graveButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfb372a431dcbda5b0c35c380ef4fc0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb372a431dcbda5b0c35c380ef4fc0d">&#9670;&nbsp;</a></span>hButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::hButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28b7cae30d536caa8b6aa688a65f31ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b7cae30d536caa8b6aa688a65f31ad">&#9670;&nbsp;</a></span>iButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::iButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d0c183eea1e216ba9657c6043eeee7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0c183eea1e216ba9657c6043eeee7d">&#9670;&nbsp;</a></span>jButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::jButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1f2d020a8b64cd70ab067ee244c33fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f2d020a8b64cd70ab067ee244c33fa">&#9670;&nbsp;</a></span>kButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::kButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a173a108cad8c0b55224483feec5f4822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a173a108cad8c0b55224483feec5f4822">&#9670;&nbsp;</a></span>lButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::lButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a97266c098ff0e2515bd1ec5af6230f26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97266c098ff0e2515bd1ec5af6230f26">&#9670;&nbsp;</a></span>m_signal_input</h2>
 
@@ -223,6 +683,336 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Variável de instância do objeto do sinal que é emitido. </p>
+
+</div>
+</div>
+<a id="a8f29eae249111de51512ef993df73e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f29eae249111de51512ef993df73e0b">&#9670;&nbsp;</a></span>mButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::mButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bbabf210f4cd82209a2204d8dac8afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bbabf210f4cd82209a2204d8dac8afd">&#9670;&nbsp;</a></span>nButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::nButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad73c61660b2af4088816721837325817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad73c61660b2af4088816721837325817">&#9670;&nbsp;</a></span>oButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::oButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67c486b433d3d34ffc87da81c8bea957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c486b433d3d34ffc87da81c8bea957">&#9670;&nbsp;</a></span>pButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::pButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a985d6cd7b116536adf0a4f6ae62b38e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985d6cd7b116536adf0a4f6ae62b38e2">&#9670;&nbsp;</a></span>qButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::qButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c5ab0e55597e8ff1ef18de137b662b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c5ab0e55597e8ff1ef18de137b662b7">&#9670;&nbsp;</a></span>rButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::rButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af066ba831bc83bc77dbefc7d685eb780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af066ba831bc83bc77dbefc7d685eb780">&#9670;&nbsp;</a></span>sButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::sButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64ca6b8ad026137cc7300a2d3b9d3f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ca6b8ad026137cc7300a2d3b9d3f4d">&#9670;&nbsp;</a></span>spaceButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::spaceButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae15700678a2e868057d2e9545b280362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae15700678a2e868057d2e9545b280362">&#9670;&nbsp;</a></span>tButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::tButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a373169c007ecfd1e32098f38b0e0f354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373169c007ecfd1e32098f38b0e0f354">&#9670;&nbsp;</a></span>uButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::uButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a113c63a1f2f7c418cc9b77f8c4a5d898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113c63a1f2f7c418cc9b77f8c4a5d898">&#9670;&nbsp;</a></span>vButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::vButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab11db0a6654039af97743397cc3b84c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11db0a6654039af97743397cc3b84c0">&#9670;&nbsp;</a></span>wButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::wButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44b2650bbc2f9429b5ca9addbd1b8a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b2650bbc2f9429b5ca9addbd1b8a58">&#9670;&nbsp;</a></span>xButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::xButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa62ab8773a4065e87bbd0a316948b62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa62ab8773a4065e87bbd0a316948b62b">&#9670;&nbsp;</a></span>yButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::yButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a046ec584ce27677e52cb1c2fce518570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046ec584ce27677e52cb1c2fce518570">&#9670;&nbsp;</a></span>zButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_keyboard_button.html">KeyboardButton</a>* Keyboard::zButton</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

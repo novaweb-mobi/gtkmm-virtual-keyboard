@@ -49,10 +49,7 @@ public:
    * @return m_signal_input O input do teclado.
    */
   type_signal_input signal_input();
-protected:
-  type_signal_input m_signal_input; //!< Variável de instância do objeto do sinal que é emitido.
 
-private:
   /**
    * @brief buildLayout Adiciona os botões a grid de acordo com o padrão de teclado brasileiro QWERTY.
    */
@@ -66,8 +63,44 @@ private:
   /**
    * @brief createButtons Cria as instâncias dos botões para o teclado.
    */
-
   void createButtons();
+
+private:
+
+  KeyboardButton* qButton;
+  KeyboardButton* wButton;
+  KeyboardButton* eButton;
+  KeyboardButton* rButton;
+  KeyboardButton* tButton;
+  KeyboardButton* yButton;
+  KeyboardButton* uButton;
+  KeyboardButton* iButton;
+  KeyboardButton* oButton;
+  KeyboardButton* pButton;
+  KeyboardButton* acuteButton;
+  KeyboardButton* aButton;
+  KeyboardButton* sButton;
+  KeyboardButton* dButton;
+  KeyboardButton* fButton;
+  KeyboardButton* gButton;
+  KeyboardButton* hButton;
+  KeyboardButton* jButton;
+  KeyboardButton* kButton;
+  KeyboardButton* lButton;
+  KeyboardButton* ccdiuButton;
+  KeyboardButton* graveButton;
+  KeyboardButton* zButton;
+  KeyboardButton* xButton;
+  KeyboardButton* cButton;
+  KeyboardButton* vButton;
+  KeyboardButton* bButton;
+  KeyboardButton* nButton;
+  KeyboardButton* mButton;
+  KeyboardButton* spaceButton;
+
+protected:
+  type_signal_input m_signal_input; //!< Variável de instância do objeto do sinal que é emitido.
+
 };
 
 #endif // KEYBOARD_H

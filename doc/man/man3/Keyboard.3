@@ -1,4 +1,4 @@
-.TH "Keyboard" 3 "Tue Feb 4 2020" "Version 0.1.0-alpha" "Gtkmm Virtual Keyboard" \" -*- nroff -*-
+.TH "Keyboard" 3 "Tue Feb 4 2020" "Version 1.0.0-alpha" "Gtkmm Virtual Keyboard" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -32,6 +32,18 @@ Inherits Grid\&.
 .RI "\fBtype_signal_input\fP \fBsignal_input\fP ()"
 .br
 .RI "signal_input Sinal do input que é emitido pelo teclado\&. "
+.ti -1c
+.RI "void \fBbuildLayout\fP ()"
+.br
+.RI "buildLayout Adiciona os botões a grid de acordo com o padrão de teclado brasileiro QWERTY\&. "
+.ti -1c
+.RI "void \fBconnectSignals\fP ()"
+.br
+.RI "connectSignals Conecta os sinais de cliques dos botões ao processador do teclado\&. "
+.ti -1c
+.RI "void \fBcreateButtons\fP ()"
+.br
+.RI "createButtons Cria as instâncias dos botões para o teclado\&. "
 .in -1c
 .SS "Protected Attributes"
 
@@ -40,6 +52,100 @@ Inherits Grid\&.
 .RI "\fBtype_signal_input\fP \fBm_signal_input\fP"
 .br
 .RI "Variável de instância do objeto do sinal que é emitido\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBqButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBwButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBeButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBrButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBtButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fByButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBuButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBiButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBoButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBpButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBacuteButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBaButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBsButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBdButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBfButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBgButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBhButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBjButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBkButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBlButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBccdiuButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBgraveButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBzButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBxButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBcButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBvButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBbButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBnButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBmButton\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardButton\fP * \fBspaceButton\fP"
+.br
 .in -1c
 .SH "Member Typedef Documentation"
 .PP 
@@ -53,6 +159,18 @@ type_signal_input Tipo de sinal emitido pelo teclado\&.
 Construtor Padrão 
 .SH "Member Function Documentation"
 .PP 
+.SS "void Keyboard::buildLayout ()"
+
+.PP
+buildLayout Adiciona os botões a grid de acordo com o padrão de teclado brasileiro QWERTY\&. 
+.SS "void Keyboard::connectSignals ()"
+
+.PP
+connectSignals Conecta os sinais de cliques dos botões ao processador do teclado\&. 
+.SS "void Keyboard::createButtons ()"
+
+.PP
+createButtons Cria as instâncias dos botões para o teclado\&. 
 .SS "void Keyboard::onKeyPress (Glib::ustring letter)"
 
 .PP
@@ -70,10 +188,70 @@ m_signal_input O input do teclado\&.
 
 .SH "Member Data Documentation"
 .PP 
+.SS "\fBKeyboardButton\fP* Keyboard::aButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::acuteButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::bButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::cButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::ccdiuButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::dButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::eButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::fButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::gButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::graveButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::hButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::iButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::jButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::kButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::lButton\fC [private]\fP"
+
 .SS "\fBtype_signal_input\fP Keyboard::m_signal_input\fC [protected]\fP"
 
 .PP
 Variável de instância do objeto do sinal que é emitido\&. 
+.SS "\fBKeyboardButton\fP* Keyboard::mButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::nButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::oButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::pButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::qButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::rButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::sButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::spaceButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::tButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::uButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::vButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::wButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::xButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::yButton\fC [private]\fP"
+
+.SS "\fBKeyboardButton\fP* Keyboard::zButton\fC [private]\fP"
+
 
 .SH "Author"
 .PP 

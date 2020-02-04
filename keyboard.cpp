@@ -32,12 +32,12 @@ Keyboard::Keyboard():Gtk::Grid(){
   set_valign(Gtk::ALIGN_FILL);
   set_row_spacing(10);
   set_column_spacing(10);
-  this.createButtons();
-  this.buildLayout();
-  this.connectSignals();
+  this->createButtons();
+  this->buildLayout();
+  this->connectSignals();
 }
 
-void KeyboardButton::connectSignals(){
+void Keyboard::connectSignals(){
   qButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );  
   wButton->signal_keypress().connect(sigc::mem_fun(this,
@@ -100,69 +100,69 @@ void KeyboardButton::connectSignals(){
                 &Keyboard::onKeyPress) );
 }
 
-void KeyboardButton::createButtons(){
-  KeyboardButton* qButton = new KeyboardButton("q");
+void Keyboard::createButtons(){
+   qButton = new KeyboardButton("q");
 
-  KeyboardButton* wButton = new KeyboardButton("w");
+   wButton = new KeyboardButton("w");
   
-  KeyboardButton* eButton = new KeyboardButton("e");
+   eButton = new KeyboardButton("e");
   
-  KeyboardButton* rButton = new KeyboardButton("r");
+   rButton = new KeyboardButton("r");
  
-  KeyboardButton* tButton = new KeyboardButton("t");
+   tButton = new KeyboardButton("t");
  
-  KeyboardButton* yButton = new KeyboardButton("y");
+   yButton = new KeyboardButton("y");
  
-  KeyboardButton* uButton = new KeyboardButton("u");
+   uButton = new KeyboardButton("u");
   
-  KeyboardButton* iButton = new KeyboardButton("i");
+   iButton = new KeyboardButton("i");
   
-  KeyboardButton* oButton = new KeyboardButton("o");
+   oButton = new KeyboardButton("o");
   
-  KeyboardButton* pButton = new KeyboardButton("p");
+   pButton = new KeyboardButton("p");
  
-  KeyboardButton* acuteButton = new KeyboardButton("´");
+   acuteButton = new KeyboardButton("´");
  
-  KeyboardButton* aButton = new KeyboardButton("a");
+   aButton = new KeyboardButton("a");
   
-  KeyboardButton* sButton = new KeyboardButton("s");
+   sButton = new KeyboardButton("s");
   
-  KeyboardButton* dButton = new KeyboardButton("d");
+   dButton = new KeyboardButton("d");
   
-  KeyboardButton* fButton = new KeyboardButton("f");
+   fButton = new KeyboardButton("f");
   
-  KeyboardButton* gButton = new KeyboardButton("g");
+   gButton = new KeyboardButton("g");
   
-  KeyboardButton* hButton = new KeyboardButton("h");
+   hButton = new KeyboardButton("h");
   
-  KeyboardButton* jButton = new KeyboardButton("j");
+   jButton = new KeyboardButton("j");
   
-  KeyboardButton* kButton = new KeyboardButton("k");
+   kButton = new KeyboardButton("k");
   
-  KeyboardButton* lButton = new KeyboardButton("l");
+   lButton = new KeyboardButton("l");
   
-  KeyboardButton* ccdiuButton = new KeyboardButton("ç");
+   ccdiuButton = new KeyboardButton("ç");
  
-  KeyboardButton* graveButton = new KeyboardButton("^");
+   graveButton = new KeyboardButton("^");
   
-  KeyboardButton* zButton = new KeyboardButton("z");
+   zButton = new KeyboardButton("z");
   
-  KeyboardButton* xButton = new KeyboardButton("x");
+   xButton = new KeyboardButton("x");
   
-  KeyboardButton* cButton = new KeyboardButton("c");
+   cButton = new KeyboardButton("c");
   
-  KeyboardButton* vButton = new KeyboardButton("v");
+   vButton = new KeyboardButton("v");
   
-  KeyboardButton* bButton = new KeyboardButton("b");
+   bButton = new KeyboardButton("b");
   
-  KeyboardButton* nButton = new KeyboardButton("n");
+   nButton = new KeyboardButton("n");
  
-  KeyboardButton* mButton = new KeyboardButton("m");
+   mButton = new KeyboardButton("m");
   
-  KeyboardButton* spaceButton = new KeyboardButton(" ");
+   spaceButton = new KeyboardButton(" ");
 }
 
-void KeyboardButton::buildLayout(){
+void Keyboard::buildLayout(){
   attach(*qButton,0,0);
 
   attach(*wButton,1,0);
