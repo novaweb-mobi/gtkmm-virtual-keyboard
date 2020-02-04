@@ -1,7 +1,10 @@
 #include "keyboardbutton.h"
 
 KeyboardButton::KeyboardButton(const char* c): Gtk::Button(c){
-
+  set_hexpand(true);
+  set_vexpand(true);
+  set_halign(Gtk::ALIGN_FILL);
+  set_valign(Gtk::ALIGN_FILL);
 }
 
 void KeyboardButton::on_clicked(){
