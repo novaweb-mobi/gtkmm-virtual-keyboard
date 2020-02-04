@@ -1,6 +1,6 @@
 #include "keyboardbutton.h"
 
-/**
+/*
 **********************************************************************
 * Project           : VirtualKeyboard
 *

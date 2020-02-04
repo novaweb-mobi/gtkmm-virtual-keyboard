@@ -1,7 +1,7 @@
 #ifndef KEYBOARDBUTTON_H
 #define KEYBOARDBUTTON_H
 
-/**
+/*
 **********************************************************************
 * Project           : VirtualKeyboard
 *

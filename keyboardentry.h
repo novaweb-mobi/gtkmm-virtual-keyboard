@@ -1,7 +1,7 @@
 #ifndef KEYBOARDENTRY_H
 #define KEYBOARDENTRY_H
 
-/**
+/*
 **********************************************************************
 * Project           : VirtualKeyboard
 *
@@ -11,7 +11,7 @@
 *
 * Author            : MatTerra
 *
-* Date created      : 20200203
+* Date Criated      : 20200203
 *
 * Copyright         : Novaweb - 2020
 *
@@ -19,6 +19,7 @@
 * Revision History  :
 *
 * Date        Author      Ref    Revision (Date in YYYYMMDD format)
+*
 * 20200203    MatTerra      1    Initial Version
 *
 **********************************************************************
@@ -30,7 +31,8 @@
 class KeyboardEntry : public Gtk::Entry
 {
 public:
-  KeyboardEntry(); /** Construtor Padrão */
+  /** Construtor Padrão */
+  KeyboardEntry();
 
   /**
    * @brief append_text Adiciona o texto recebido ao final do texto atual do KeyboardEntry

@@ -1,0 +1,91 @@
+.TH "md__home_mateusberardo__documents__novaweb__virtual_keyboard_gtkmm-virtual-keyboard__r_e_a_d_m_e" 3 "Tue Feb 4 2020" "Version 0.1.0-alpha" "Gtkmm Virtual Keyboard" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__home_mateusberardo__documents__novaweb__virtual_keyboard_gtkmm-virtual-keyboard__r_e_a_d_m_e \- Gtkmm Virtual \fBKeyboard\fP 
+This project is a virtual application keyboard developed in c++ using gtkmm and sigc++\&. You will need to have sigc++ to connect a slot to the input signal emitted by the keyboard\&. It is not meant to work as a virtual keyboard for other processes but rather a component in a gtkmm or c++ application\&.
+.SH "First Steps"
+.PP
+We use CMake to compile and build the keyboard\&. It was developed as a Gtk::Grid that can be added to other containers as Windows and Boxes\&. It emits a signal_input() with a Glib::ustring argument whenever a key is pressed\&.
+.SS "Prerequisites"
+This library depends on Gtkmm and sigc++\&. It is enough to install gtkmm as sigc++ is a dependencie for it and will be installed together\&.
+.SS "Installing"
+To install it, follow the steps below according to your OS\&. (Windows instructions coming soon)
+.SS "Linux"
+To install in Linux, use your package manager\&. The next command will install it in Manjaro(Arch):
+.PP
+.PP
+.nf
+sudo pacman -Syu gtkmm3
+.fi
+.PP
+.PP
+If you use Ubuntu, and maybe other Debian based distros, the command is: 
+.PP
+.nf
+sudo apt install libgtkmm-3\&.0-dev
+
+.fi
+.PP
+.PP
+To test it, run the following command in the root folder of the project: 
+.PP
+.nf
+g++ main\&.cpp keyboard\&.cpp keyboardentry\&.cpp keyboardbutton\&.cpp -o demo `pkg-config gtkmm-3\&.0 --cflags --libs` && \&./demo
+
+.fi
+.PP
+.PP
+You should see the following screen with the keyboard and an entry field\&. Try pressing the keys to see if you can type\&.
+.SH "Integration guide"
+.PP
+To use the keyboard with your application you need to use sigc++ and create a slot for the signal input emitted by the keyboard widget\&. The following snippet shows how to create a keyboard object:
+.PP
+.PP
+.nf
+ {c++}
+Keyboard* keyboard =  new Keyboard();
+.fi
+.PP
+.PP
+You can then add it to a window or container\&. Below you can see how to connect a callback function to the signal_input\&. The callback must be a void function that takes a const Glib::ustring* as an argument and entry is not a pointer\&.
+.PP
+.PP
+.nf
+keyboard->signal_input()\&.connect(sigc::mem_fun(receiver_object, &receiver_object::callback_function));
+.fi
+.PP
+.PP
+As the regular text entry components in Gtk don't support text appending, I extended Gtk::Entry to add the append_text function\&. This function can be used as the slot for the keyboard signal_input\&. For more details on how to do this, check \fCmain\&.cpp\fP
+.SH "Compiling/Building/Deploying"
+.PP
+To build in the command line, I suggest you use the command \fCg++ <files> -o <exe_name> `pkg-config gtkmm-3\&.0 --cflags --libs`\fP\&. The \fC`pkg-config gtkmm-3\&.0 --cflags --libs`\fP part will add the g++ options to link gtkmm\&.
+.PP
+Rather than compiling by hand, I recommend that you use CMake or other build tool\&. For CMake, check CMakeList\&.txt for details on how to link gtkmm to your executable\&.
+.SH "Build Tools"
+.PP
+.IP "\(bu" 2
+\fCCMake\fP - CMake is an open-source, cross-platform family of tools designed to build, test and package software\&.
+.PP
+.SH "Contributing"
+.PP
+Please open an issue, fork the repo and open a PR when your feature is complete\&. Include in the PR description a test procedure and a detailed description of the feature\&.
+.SH "Versioning"
+.PP
+We use \fCSemVer\fP\&. For available versions, check the \fCtags\fP\&.
+.SH "Autores"
+.PP
+.IP "\(bu" 2
+\fBMateus Berardo\fP - \fIInitial Work\fP - \fCMatTerra\fP
+.PP
+.PP
+Check the \fCcontribuitors\fP that helped in this project\&.
+.SH "License"
+.PP
+This project is licensed under a MIT license - check \fBLICENSE\&.md\fP for details\&.
+.SH "Agradecimentos"
+.PP
+.IP "\(bu" 2
+\fBBillie Thompson\fP - \fIREADME template\fP - \fCPurpleBooth\fP 
+.PP
+

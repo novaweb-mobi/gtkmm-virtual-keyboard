@@ -1,0 +1,80 @@
+.TH "Keyboard" 3 "Tue Feb 4 2020" "Version 0.1.0-alpha" "Gtkmm Virtual Keyboard" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Keyboard
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <keyboard\&.h>\fP
+.PP
+Inherits Grid\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef sigc::signal< void, Glib::ustring > \fBtype_signal_input\fP"
+.br
+.RI "type_signal_input Tipo de sinal emitido pelo teclado\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKeyboard\fP ()"
+.br
+.ti -1c
+.RI "void \fBonKeyPress\fP (Glib::ustring)"
+.br
+.RI "onKeyPress Slot para processamento de clique recebido no teclado virtual\&. Recebe o sinal vindo das teclas e dispara o sinal com o input\&. "
+.ti -1c
+.RI "\fBtype_signal_input\fP \fBsignal_input\fP ()"
+.br
+.RI "signal_input Sinal do input que é emitido pelo teclado\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtype_signal_input\fP \fBm_signal_input\fP"
+.br
+.RI "Variável de instância do objeto do sinal que é emitido\&. "
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef sigc::signal<void, Glib::ustring> \fBKeyboard::type_signal_input\fP"
+
+.PP
+type_signal_input Tipo de sinal emitido pelo teclado\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Keyboard::Keyboard ()"
+Construtor Padrão 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Keyboard::onKeyPress (Glib::ustring letter)"
+
+.PP
+onKeyPress Slot para processamento de clique recebido no teclado virtual\&. Recebe o sinal vindo das teclas e dispara o sinal com o input\&. 
+.SS "\fBKeyboard::type_signal_input\fP Keyboard::signal_input ()"
+
+.PP
+signal_input Sinal do input que é emitido pelo teclado\&. 
+.PP
+\fBReturns\fP
+.RS 4
+m_signal_input O input do teclado\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBtype_signal_input\fP Keyboard::m_signal_input\fC [protected]\fP"
+
+.PP
+Variável de instância do objeto do sinal que é emitido\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Gtkmm Virtual Keyboard from the source code\&.

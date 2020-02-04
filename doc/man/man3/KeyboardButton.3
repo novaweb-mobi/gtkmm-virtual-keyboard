@@ -1,0 +1,84 @@
+.TH "KeyboardButton" 3 "Tue Feb 4 2020" "Version 0.1.0-alpha" "Gtkmm Virtual Keyboard" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+KeyboardButton
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <keyboardbutton\&.h>\fP
+.PP
+Inherits Button\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef sigc::signal< void, Glib::ustring > \fBtype_signal_keypress\fP"
+.br
+.RI "type_signal_keypress Tipo de sinal emitido pela tecla\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKeyboardButton\fP (const char *)"
+.br
+.ti -1c
+.RI "\fBtype_signal_keypress\fP \fBsignal_keypress\fP ()"
+.br
+.RI "signal_keypress Sinal de pressionado que é emitido pelo botão\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBon_clicked\fP ()"
+.br
+.RI "on_clicked Slot herdado do botão para tratar cliques e emitir o sinal tratado "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtype_signal_keypress\fP \fBm_signal_keypress\fP"
+.br
+.RI "Variável de instância do objeto do sinal que é emitido\&. "
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef sigc::signal<void, Glib::ustring> \fBKeyboardButton::type_signal_keypress\fP"
+
+.PP
+type_signal_keypress Tipo de sinal emitido pela tecla\&. Construtor Padrão 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "KeyboardButton::KeyboardButton (const char * c)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void KeyboardButton::on_clicked ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+on_clicked Slot herdado do botão para tratar cliques e emitir o sinal tratado 
+.SS "\fBKeyboardButton::type_signal_keypress\fP KeyboardButton::signal_keypress ()"
+
+.PP
+signal_keypress Sinal de pressionado que é emitido pelo botão\&. 
+.PP
+\fBReturns\fP
+.RS 4
+m_signal_keypress O conteúdo do botão 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBtype_signal_keypress\fP KeyboardButton::m_signal_keypress\fC [protected]\fP"
+
+.PP
+Variável de instância do objeto do sinal que é emitido\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Gtkmm Virtual Keyboard from the source code\&.

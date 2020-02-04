@@ -1,0 +1,27 @@
+.TH "/home/mateusberardo/Documents/Novaweb/VirtualKeyboard/gtkmm-virtual-keyboard/CMakeLists.txt" 3 "Tue Feb 4 2020" "Version 0.1.0-alpha" "Gtkmm Virtual Keyboard" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/mateusberardo/Documents/Novaweb/VirtualKeyboard/gtkmm-virtual-keyboard/CMakeLists.txt
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcmake_minimum_required\fP (VERSION 3\&.5) project(VirtualKeyboard LANGUAGES CXX) find_package(PkgConfig REQUIRED) pkg_check_modules(GTKMM gtkmm\-3\&.0) set(CMAKE_CXX_STANDARD 11) set(CMAKE_CXX_STANDARD_REQUIRED ON) message(STATUS 'Linking GTK\-\-') link_directories($"
+.br
+.ti -1c
+.RI "\fBinclude_directories\fP (${GTKMM_INCLUDE_DIRS}) add_library(vkeyboard STATIC keyboard\&.cpp keyboardbutton\&.cpp keyboardentry\&.cpp) add_executable(VirtualKeyboard main\&.cpp) target_link_libraries(VirtualKeyboard $"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "cmake_minimum_required (VERSION 3\&. 5)"
+
+.SS "include_directories ( ${GTKMM_INCLUDE_DIRS})"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Gtkmm Virtual Keyboard from the source code\&.
