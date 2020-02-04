@@ -48,7 +48,9 @@ public:
    * @brief signal_input Sinal do input que é emitido pelo teclado.
    * @return m_signal_input O input do teclado.
    */
-  type_signal_input signal_input();
+  type_signal_input signal_input(); 
+
+private:
 
   /**
    * @brief buildLayout Adiciona os botões a grid de acordo com o padrão de teclado brasileiro QWERTY.
@@ -65,9 +67,7 @@ public:
    */
   void createButtons();
 
-private:
-
-  KeyboardButton* qButton;
+  KeyboardButton* qButton; //!< Atributo de instância "qButton". Botão "q" do teclado.
   KeyboardButton* wButton;
   KeyboardButton* eButton;
   KeyboardButton* rButton;
