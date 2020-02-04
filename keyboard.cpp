@@ -25,6 +25,12 @@
 */
 
 Keyboard::Keyboard():Gtk::Grid(){
+  set_hexpand(true);
+  set_vexpand(true);
+  set_halign(Gtk::ALIGN_FILL);
+  set_valign(Gtk::ALIGN_FILL);
+  set_row_spacing(10);
+  set_column_spacing(10);
 
   KeyboardButton* qButton = new KeyboardButton("q");
   attach(*qButton,0,0);
@@ -88,7 +94,7 @@ Keyboard::Keyboard():Gtk::Grid(){
   attach(*nButton,7,2);
   KeyboardButton* mButton = new KeyboardButton("m");
   attach(*mButton,8,2);
-
+  show_all();
 }
 
 void Keyboard::onKeyPress(Glib::ustring letter){
