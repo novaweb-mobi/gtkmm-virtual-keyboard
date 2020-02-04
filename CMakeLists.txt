@@ -12,5 +12,7 @@ message(STATUS "Linking GTK--")
 link_directories(${GTKMM_LIBRARY_DIRS})
 include_directories(${GTKMM_INCLUDE_DIRS})
 
-add_executable(VirtualKeyboard main.cpp keyboardbutton.cpp keyboard.cpp keyboardentry.cpp)
-target_link_libraries(VirtualKeyboard ${GTKMM_LIBRARIES})
+add_library( vkeyboard STATIC keyboard.cpp keyboardbutton.cpp keyboardentry.cpp )
+
+add_executable(VirtualKeyboard main.cpp)
+target_link_libraries(VirtualKeyboard ${GTKMM_LIBRARIES} vkeyboard)
