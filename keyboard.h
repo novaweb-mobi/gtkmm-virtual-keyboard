@@ -68,35 +68,35 @@ private:
   void createButtons();
 
   KeyboardButton* qButton; //!< Atributo de instância "qButton". Botão "q" do teclado.
-  KeyboardButton* wButton;
-  KeyboardButton* eButton;
-  KeyboardButton* rButton;
-  KeyboardButton* tButton;
-  KeyboardButton* yButton;
-  KeyboardButton* uButton;
-  KeyboardButton* iButton;
-  KeyboardButton* oButton;
-  KeyboardButton* pButton;
-  KeyboardButton* acuteButton;
-  KeyboardButton* aButton;
-  KeyboardButton* sButton;
-  KeyboardButton* dButton;
-  KeyboardButton* fButton;
-  KeyboardButton* gButton;
-  KeyboardButton* hButton;
-  KeyboardButton* jButton;
-  KeyboardButton* kButton;
-  KeyboardButton* lButton;
-  KeyboardButton* ccdiuButton;
-  KeyboardButton* graveButton;
-  KeyboardButton* zButton;
-  KeyboardButton* xButton;
-  KeyboardButton* cButton;
-  KeyboardButton* vButton;
-  KeyboardButton* bButton;
-  KeyboardButton* nButton;
-  KeyboardButton* mButton;
-  KeyboardButton* spaceButton;
+  KeyboardButton* wButton; //!< Atributo de instância "wButton". Botão "w" do teclado.
+  KeyboardButton* eButton; //!< Atributo de instância "eButton". Botão "e" do teclado.
+  KeyboardButton* rButton; //!< Atributo de instância "rButton". Botão "r" do teclado.
+  KeyboardButton* tButton; //!< Atributo de instância "tButton". Botão "t" do teclado.
+  KeyboardButton* yButton; //!< Atributo de instância "yButton". Botão "y" do teclado.
+  KeyboardButton* uButton; //!< Atributo de instância "uButton". Botão "u" do teclado.
+  KeyboardButton* iButton; //!< Atributo de instância "iButton". Botão "i" do teclado.
+  KeyboardButton* oButton; //!< Atributo de instância "oButton". Botão "o" do teclado.
+  KeyboardButton* pButton; //!< Atributo de instância "pButton". Botão "p" do teclado.
+  KeyboardButton* acuteButton; //!< Atributo de instância "acuteButton". Botão "acute" do teclado.
+  KeyboardButton* aButton; //!< Atributo de instância "aButton". Botão "a" do teclado.
+  KeyboardButton* sButton; //!< Atributo de instância "sButton". Botão "s" do teclado.
+  KeyboardButton* dButton; //!< Atributo de instância "dButton". Botão "d" do teclado.
+  KeyboardButton* fButton; //!< Atributo de instância "fButton". Botão "f" do teclado.
+  KeyboardButton* gButton; //!< Atributo de instância "gButton". Botão "g" do teclado.
+  KeyboardButton* hButton; //!< Atributo de instância "hButton". Botão "h" do teclado.
+  KeyboardButton* jButton; //!< Atributo de instância "jButton". Botão "j" do teclado.
+  KeyboardButton* kButton; //!< Atributo de instância "kButton". Botão "k" do teclado.
+  KeyboardButton* lButton; //!< Atributo de instância "lButton". Botão "l" do teclado.
+  KeyboardButton* ccdiuButton; //!< Atributo de instância "ccdiuButton". Botão "ç" do teclado.
+  KeyboardButton* graveButton; //!< Atributo de instância "graveButton". Botão "^" do teclado.
+  KeyboardButton* zButton; //!< Atributo de instância "zButton". Botão "z" do teclado.
+  KeyboardButton* xButton; //!< Atributo de instância "xButton". Botão "x" do teclado.
+  KeyboardButton* cButton; //!< Atributo de instância "cButton". Botão "c" do teclado.
+  KeyboardButton* vButton; //!< Atributo de instância "vButton". Botão "v" do teclado.
+  KeyboardButton* bButton; //!< Atributo de instância "bButton". Botão "b" do teclado.
+  KeyboardButton* nButton; //!< Atributo de instância "nButton". Botão "n" do teclado.
+  KeyboardButton* mButton; //!< Atributo de instância "mButton". Botão "m" do teclado.
+  KeyboardButton* spaceButton; //!< Atributo de instância "spaceButton". Botão " " do teclado.
 
 protected:
   type_signal_input m_signal_input; //!< Variável de instância do objeto do sinal que é emitido.
