@@ -67,6 +67,8 @@ private:
    */
   void createButtons();
 
+  bool flagUpper = false;
+  
   KeyboardButton* qButton; //!< Atributo de instância "qButton". Botão "q" do teclado.
   KeyboardButton* wButton; //!< Atributo de instância "wButton". Botão "w" do teclado.
   KeyboardButton* eButton; //!< Atributo de instância "eButton". Botão "e" do teclado.

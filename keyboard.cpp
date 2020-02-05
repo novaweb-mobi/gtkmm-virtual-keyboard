@@ -269,10 +269,23 @@ void Keyboard::buildLayout(){
 
 void Keyboard::onKeyPress(Glib::ustring letter){
   std::cout << letter.raw() << std::endl;
+  if (letter == "\u2191"){
+
+    flagUpper = !flagUpper;
+
+  }
+  if (flagUpper){
+
+    letter = toupper(letter);
+
+  }
+
   m_signal_input.emit(letter);
 }
 
 Keyboard::type_signal_input Keyboard::signal_input(){
   return m_signal_input;
 }
+
+
 
