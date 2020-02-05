@@ -98,6 +98,18 @@ void Keyboard::connectSignals(){
                 &Keyboard::onKeyPress) );
   spaceButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
+  atsignButton->signal_Keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  tilButton->signal_Keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  underButton->signal_Keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  hifenButton->signal_Keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) ); 
+  pointButton->signal_Keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  irButton->signal_Keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );                                         
 }
 
 void Keyboard::createButtons(){
@@ -158,8 +170,22 @@ void Keyboard::createButtons(){
    nButton = new KeyboardButton("n");
  
    mButton = new KeyboardButton("m");
-  
+
+   atsignButton = new KeyboardButton("@");
+
+   tilButton = new KeyboardButton("~");
+
+   underButton = new KeyboardButton("_");
+
+   hifenButton = new KeyboardButton("-");
+
    spaceButton = new KeyboardButton(" ");
+
+   pointButton = new KeyboardButton(".");
+
+   irButton = new KeyboardButton("Ir");
+
+   toupperButton = new KeyboardButton("\u2191");
 }
 
 void Keyboard::buildLayout(){
@@ -221,8 +247,22 @@ void Keyboard::buildLayout(){
   
   attach(*mButton,8,2);
   
-  attach(*spaceButton,2,3,7);
+  attach(*spaceButton,2,3,6);
   
+  attach(*atsignButton,11,0);
+
+  attach(*tilButton,9,2);
+
+  attach(*underButton,11,1);
+
+  attach(*hifenButton,10,2);
+
+  attach(*pointButton,10,3);
+
+  attach(*irButton,11,3,2);
+
+  attach(*toupperButton,0,2,2,2);
+
   show_all();
 }
 

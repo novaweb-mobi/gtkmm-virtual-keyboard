@@ -97,6 +97,13 @@ private:
   KeyboardButton* nButton; //!< Atributo de instância "nButton". Botão "n" do teclado.
   KeyboardButton* mButton; //!< Atributo de instância "mButton". Botão "m" do teclado.
   KeyboardButton* spaceButton; //!< Atributo de instância "spaceButton". Botão " " do teclado.
+  KeyboardButton* atsignButton; //!< Atributo de instância "atsignButton". Botão "@" do teclado.
+  KeyboardButton* tilButton; //!< Atributo de instância "tilButton". Botão "~" do teclado.
+  KeyboardButton* underButton; //!< Atributo de instância "underButton". Botão "_" do teclado.
+  KeyboardButton* hifenButton; //!< Atributo de instância "hifenButton". Botão "-" do teclado.
+  KeyboardButton* pointButton; //!< Atributo de instância "pointButton". Botão "." do teclado.
+  KeyboardButton* irButton; //!< Atributo de instância "irButton". Botão "Ir" do teclado.
+  KeyboardButton* toupperButton; //!< Atributo de instância "toupperButton". Botão "\u2191" do teclado.
 
 protected:
   type_signal_input m_signal_input; //!< Variável de instância do objeto do sinal que é emitido.
