@@ -32,6 +32,7 @@ KeyboardButton::KeyboardButton(const char* c): Gtk::Button(c){
 }
 
 void KeyboardButton::on_clicked(){
+  std::cout << Gtk::Button::get_label() << std::endl;
   m_signal_keypress.emit(Gtk::Button::get_label());
 }
 

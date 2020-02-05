@@ -98,18 +98,20 @@ void Keyboard::connectSignals(){
                 &Keyboard::onKeyPress) );
   spaceButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
-  atsignButton->signal_Keypress().connect(sigc::mem_fun(this,
+  atsignButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
-  tilButton->signal_Keypress().connect(sigc::mem_fun(this,
+  tilButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
-  underButton->signal_Keypress().connect(sigc::mem_fun(this,
+  underButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
-  hifenButton->signal_Keypress().connect(sigc::mem_fun(this,
+  hifenButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) ); 
-  pointButton->signal_Keypress().connect(sigc::mem_fun(this,
+  pointButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
-  irButton->signal_Keypress().connect(sigc::mem_fun(this,
-                &Keyboard::onKeyPress) );                                         
+  irButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
+  toupperButton->signal_keypress().connect(sigc::mem_fun(this,
+                &Keyboard::onKeyPress) );
 }
 
 void Keyboard::createButtons(){
@@ -268,18 +270,16 @@ void Keyboard::buildLayout(){
 
 
 void Keyboard::onKeyPress(Glib::ustring letter){
-  std::cout << letter.raw() << std::endl;
+  std::cout << letter << std::endl;
+
   if (letter == "\u2191"){
-
     flagUpper = !flagUpper;
-
+    std::cout << "Upper" << std::endl;
+    return;
   }
   if (flagUpper){
-
-    letter = toupper(letter);
-
+    letter = letter.uppercase();
   }
-
   m_signal_input.emit(letter);
 }
 

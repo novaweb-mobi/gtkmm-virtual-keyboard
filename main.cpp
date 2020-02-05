@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 {
   auto app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
   Gtk::Window window;
-  window.fullscreen();
+//  window.fullscreen();
   Gtk::VBox layout;
   KeyboardEntry entry;
   Keyboard* keyboard = new Keyboard();
