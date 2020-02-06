@@ -112,6 +112,28 @@ void Keyboard::connectSignals(){
                 &Keyboard::onKeyPress) );
   toupperButton->signal_keypress().connect(sigc::mem_fun(this,
                 &Keyboard::onKeyPress) );
+  backspaceButton->signal_keypress().connect(sigc::mem_fun(this,
+		&Keyboard::onKeyPress) );
+  Button_0->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_1->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_2->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_3->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_4->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_5->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_6->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_7->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_8->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
+  Button_9->signal_keypress().connect(sigc::mem_fun(this,
+        &Keyboard::onKeyPress) );
 }
 
 void Keyboard::createButtons(){
@@ -188,82 +210,126 @@ void Keyboard::createButtons(){
    irButton = new KeyboardButton("Ir");
 
    toupperButton = new KeyboardButton("\u2191");
+
+   backspaceButton = new KeyboardButton("\u2190");
+
+   Button_0 = new KeyboardButton("0");
+
+   Button_1 = new KeyboardButton("1");
+
+   Button_2 = new KeyboardButton("2");
+
+   Button_3 = new KeyboardButton("3");
+
+   Button_4 = new KeyboardButton("4");
+
+   Button_5 = new KeyboardButton("5");
+
+   Button_6 = new KeyboardButton("6");
+
+   Button_7 = new KeyboardButton("7");
+
+   Button_8 = new KeyboardButton("8");
+
+   Button_9 = new KeyboardButton("9");
 }
 
 void Keyboard::buildLayout(){
-  attach(*qButton,0,0);
+  attach(*Button_0,9,0);
 
-  attach(*wButton,1,0);
+  attach(*Button_1,0,0);
 
-  attach(*eButton,2,0);
+  attach(*Button_2,1,0);
 
-  attach(*rButton,3,0);
+  attach(*Button_3,2,0);
 
-  attach(*tButton,4,0);
+  attach(*Button_4,3,0);
+
+  attach(*Button_5,4,0);
+
+  attach(*Button_6,5,0);
+
+  attach(*Button_7,6,0);
+
+  attach(*Button_8,7,0);
+
+  attach(*Button_9,8,0);
+
+  attach(*qButton,0,1);
+
+  attach(*wButton,1,1);
+
+  attach(*eButton,2,1);
+
+  attach(*rButton,3,1);
+
+  attach(*tButton,4,1);
  
-  attach(*yButton,5,0);
+  attach(*yButton,5,1);
   
-  attach(*uButton,6,0);
+  attach(*uButton,6,1);
  
-  attach(*iButton,7,0);
+  attach(*iButton,7,1);
   
-  attach(*oButton,8,0);
+  attach(*oButton,8,1);
   
-  attach(*pButton,9,0);
+  attach(*pButton,9,1);
  
-  attach(*acuteButton,10,0);
+  attach(*acuteButton,10,1);
   
-  attach(*aButton,0,1);
+  attach(*aButton,0,2);
  
-  attach(*sButton,1,1);
+  attach(*sButton,1,2);
   
-  attach(*dButton,2,1);
+  attach(*dButton,2,2);
  
-  attach(*fButton,3,1);
+  attach(*fButton,3,2);
   
-  attach(*gButton,4,1);
+  attach(*gButton,4,2);
   
-  attach(*hButton,5,1);
+  attach(*hButton,5,2);
  
-  attach(*jButton,6,1);
+  attach(*jButton,6,2);
   
-  attach(*kButton,7,1);
+  attach(*kButton,7,2);
  
-  attach(*lButton,8,1);
+  attach(*lButton,8,2);
   
   attach(*ccdiuButton,9,1);
  
-  attach(*graveButton,10,1);
+  attach(*graveButton,10,2);
  
-  attach(*zButton,2,2);
+  attach(*zButton,2,3);
   
-  attach(*xButton,3,2);
+  attach(*xButton,3,3);
   
-  attach(*cButton,4,2);
+  attach(*cButton,4,3);
   
-  attach(*vButton,5,2);
+  attach(*vButton,5,3);
   
-  attach(*bButton,6,2);
+  attach(*bButton,6,3);
   
-  attach(*nButton,7,2);
+  attach(*nButton,7,3);
   
-  attach(*mButton,8,2);
+  attach(*mButton,8,3);
   
-  attach(*spaceButton,2,3,6);
+  attach(*spaceButton,2,4,7,2);
   
-  attach(*atsignButton,11,0);
+  attach(*atsignButton,11,1);
 
-  attach(*tilButton,9,2);
+  attach(*tilButton,10,3);
 
-  attach(*underButton,11,1);
+  attach(*underButton,11,2);
 
-  attach(*hifenButton,10,2);
+  attach(*hifenButton,11,3);
 
-  attach(*pointButton,10,3);
+  attach(*pointButton,9,4);
 
-  attach(*irButton,11,3,2);
+  attach(*irButton,10,4,2);
 
-  attach(*toupperButton,0,2,2,2);
+  attach(*toupperButton,0,4,2);
+  
+  attach(*backspaceButton,10,0,2);
 
   show_all();
 }

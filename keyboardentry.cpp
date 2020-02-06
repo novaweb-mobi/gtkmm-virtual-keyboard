@@ -29,5 +29,12 @@ KeyboardEntry::KeyboardEntry() : Gtk::Entry()
 }
 
 void KeyboardEntry::append_text(Glib::ustring text){
+  if(text=="\u2190"){
+        Glib::ustring get=get_text();
+        set_text(get.substr(0,get.size()-1));
+        return;
+    }
   set_text(get_text()+text);
 }
+
+
