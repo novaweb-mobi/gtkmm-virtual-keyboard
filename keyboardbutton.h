@@ -20,18 +20,22 @@
 *
 * Date        Author      Ref    Revision (Date in YYYYMMDD format)
 * 20200203    MatTerra      1    Initial Version
+* 20200210    MatTerra      2    Adicionado tratamento de letras maiúsculas
 *
 **********************************************************************
 */
 
+class Keyboard;
+#include "keyboard.h"
 #include <gtkmm/button.h>
 #include <glibmm/ustring.h>
 #include <sigc++/signal.h>
 #include <iostream>
 
+
 class KeyboardButton : public Gtk::Button{
 public:
-  KeyboardButton(const char*); /** Construtor Padrão */
+  KeyboardButton(Glib::ustring, Keyboard*); /** Construtor Padrão */
   //signal accessor:
   /**
    * @brief type_signal_keypress Tipo de sinal emitido pela tecla.
@@ -50,6 +54,13 @@ protected:
    * @brief on_clicked Slot herdado do botão para tratar cliques e emitir o sinal tratado
    */
   virtual void on_clicked();
+
+  /**
+   * @brief onUpperPress Slot para tratar troca de case das teclas
+   */
+  void onUpperPress();
+private:
+  Keyboard* parent;
 };
 
 #endif // KEYBOARDBUTTON_H

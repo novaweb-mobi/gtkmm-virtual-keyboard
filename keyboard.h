@@ -21,10 +21,10 @@
 * Date        Author          Ref    Revision (Date in YYYYMMDD format)
 * 20200203    MatTerra        1      Initial Version
 * 20200204    Victor-Matheus  2      Implementação do teclado e documentação
-*
+* 20200210    MatTerra        3      Alteração do tratamento de upper case e acentos
 **********************************************************************
 */
-
+class KeyboardButton;
 #include <gtkmm/grid.h>
 #include <gtkmm/box.h>
 #include <glibmm/ustring.h>
@@ -50,6 +50,17 @@ public:
    */
   type_signal_input signal_input(); 
 
+  /**
+   * @brief type_signal_upper Tipo de sinal emitido pelo teclado para transformar o texto em uppercase.
+   */
+  typedef sigc::signal<void> type_signal_upper;
+
+  /**
+   * @brief signal_upper Sinal de transformar o texto em uppercase que é emitido pelo teclado.
+   */
+  type_signal_upper signal_upper();
+
+
 private:
 
   /**
@@ -66,8 +77,6 @@ private:
    * @brief createButtons Cria as instâncias dos botões para o teclado.
    */
   void createButtons();
-
-  bool flagUpper = false;
   
   KeyboardButton* qButton; //!< Atributo de instância "qButton". Botão "q" do teclado.
   KeyboardButton* wButton; //!< Atributo de instância "wButton". Botão "w" do teclado.
@@ -118,9 +127,14 @@ private:
   KeyboardButton* Button_8; //!< Atributo de instância "Button_8". Botão "8" do teclado.
   KeyboardButton* Button_9; //!< Atributo de instância "Button_9". Botão "9" do teclado.
 
-protected:
-  type_signal_input m_signal_input; //!< Variável de instância do objeto do sinal que é emitido.
+  bool flagAcute = false, //!< Atributo de instância "flagAcute". Flag que acusa acento agudo no buffer.
+       flagGrave = false, //!< Atributo de instância "flagGrave". Flag que acusa acento circunflexo no buffer.
+       flagTilde = false, //!< Atributo de instância "flagTilde". Flag que acusa tio no buffer.
+       isUpper=false; //!< Atributo de instância "isUpper". Flag que acusa letra maiúscula ativada.
 
+protected:
+  type_signal_input m_signal_input; //!< Variável de instância do objeto do sinal que é emitido com a entrada de texto.
+  type_signal_upper m_signal_upper; //!< Variável de instância do objeto do sinal que é emitido para transformar texto em upper case.
 };
 
 #endif // KEYBOARD_H
