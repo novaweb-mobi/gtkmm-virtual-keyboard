@@ -15,29 +15,29 @@ NumericKeyboard::NumericKeyboard():Gtk::Grid(){
 void NumericKeyboard::connectSignals(){
 
   Button_0->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_1->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_2->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_3->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_4->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_5->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_6->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_7->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_8->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   Button_9->signal_keypress().connect(sigc::mem_fun(this,
-        &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
   backspaceButton->signal_keypress().connect(sigc::mem_fun(this,
-		&Keyboard::onKeyPress) );
+	  &NumericKeyboard::onKeyPress) );
   irButton->signal_keypress().connect(sigc::mem_fun(this,
-                &Keyboard::onKeyPress) );
+        &NumericKeyboard::onKeyPress) );
 }
 
 void NumericKeyboard::createButtons(){
